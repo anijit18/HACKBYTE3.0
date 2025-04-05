@@ -60,7 +60,7 @@ export default function ContactUs() {
           </div>
           <button
             type="submit"
-            className="w-full bg-blue-600 text-white font-semibold py-2 rounded-xl hover:bg-blue-700 transition"
+            className="w-full bg-blue-700 text-white font-semibold py-2 rounded-xl hover:bg-teal-400 transition"
           >
             Send Message
           </button>

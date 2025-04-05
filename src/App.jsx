@@ -8,6 +8,7 @@ import LoginPage from './pages/Login'
 import ContactUs from './pages/Contact'
 import AboutUs from './pages/About'
 import SignUp from './pages/SignUp'
+import Profile from './pages/Profile'
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
        <NavBar/>
         <Routes>
           <Route path="/" element={<HomePage/>} />
+          <Route path="/profile" element={<Profile/>} />
           <Route path="/login" element={<LoginPage/>} />
           <Route path="/signup" element={<SignUp/>} />
           <Route path="/contactus" element={<ContactUs/>} />

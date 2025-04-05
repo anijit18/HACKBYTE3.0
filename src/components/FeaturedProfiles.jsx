@@ -21,7 +21,31 @@ const profiles =[
     {
         // name: "Alice Johnson",
         image: "https://c.pxhere.com/photos/da/49/face_facial_hair_fine_looking_guy_man_model_person_portrait-1563283.jpg!d",
-        title: "App Dev",
+        title: "Natural Language Processing (NLP)",
+        description: "Passionate about creating user-friendly interfaces"
+    },
+    {
+        // name: "John Doe",
+        image: "https://c.pxhere.com/photos/da/49/face_facial_hair_fine_looking_guy_man_model_person_portrait-1563283.jpg!d",
+        title: "Software Engineer",
+        description: "Expert in React and Node.js"
+    },
+    {
+        // name: "Jane Smith",
+        image: "https://c.pxhere.com/photos/da/49/face_facial_hair_fine_looking_guy_man_model_person_portrait-1563283.jpg!d",
+        title: "Data Engineering",
+        description: "Specializes in Machine Learning and AI"
+    },
+    {
+        // name: "Alice Johnson",
+        image: "https://c.pxhere.com/photos/da/49/face_facial_hair_fine_looking_guy_man_model_person_portrait-1563283.jpg!d",
+        title: "Computer Vision",
+        description: "Passionate about creating user-friendly interfaces"
+    },
+    {
+        // name: "Alice Johnson",
+        image: "https://c.pxhere.com/photos/da/49/face_facial_hair_fine_looking_guy_man_model_person_portrait-1563283.jpg!d",
+        title: "Full Stack Development",
         description: "Passionate about creating user-friendly interfaces"
     }
 ]
