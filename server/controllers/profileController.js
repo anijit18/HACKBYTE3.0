@@ -13,8 +13,9 @@ const getProfile = async (req, res) => {
 
 // PUT /api/profile/:id -- update
 const updateProfile = async (req, res) => {
+  // console.log(req);
   try {
-    if (req.user.userId !== req.params.id) {
+    if (req.user.id !== req.params.id) {
       return res.status(403).json({ message: "Unauthorized" });
     }
 
@@ -35,7 +36,7 @@ const updateProfile = async (req, res) => {
 //delete profile
 const deleteProfile = async (req, res) => {
     try {
-      if (req.user.userId !== req.params.id) {
+      if (req.user.id !== req.params.id) {
         return res.status(403).json({ message: "Unauthorized" });
       }
   
