@@ -3,49 +3,47 @@ import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/f
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-100 dark:bg-gray-900 text-gray-700 dark:text-gray-300 py-10 px-5">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-        
-        {/* Logo & Description */}
-        <div>
-          <h1 className="text-2xl font-bold text-gray-800 dark:text-white mb-2">Gravitons</h1>
-          <p className="text-sm">Connecting ideas, building the future. <br/>All rights reserved © 2025</p>
-        </div>
-
-        {/* Navigation Links */}
-        <div className="flex flex-col space-y-2">
-          <h2 className="text-lg font-semibold text-gray-800 dark:text-white mb-1">Quick Links</h2>
-          <a href="/" className="hover:text-blue-500">Home</a>
-          <a href="/about" className="hover:text-blue-500">About</a>
-          <a href="/contact" className="hover:text-blue-500">Contact</a>
-          <a href="/login" className="hover:text-blue-500">Login</a>
-        </div>
-
-        {/* Social Media */}
-        <div>
-          <h2 className="text-lg font-semibold text-gray-800 dark:text-white mb-3">Follow Us</h2>
-          <div className="flex space-x-4">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600">
-              <FaFacebookF />
-            </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400">
-              <FaTwitter />
-            </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-pink-500">
-              <FaInstagram />
-            </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-700">
-              <FaLinkedinIn />
-            </a>
-          </div>
+    <footer className="bg-gradient-to-tr from-blue-50 to-purple-100 dark:from-gray-800 dark:to-gray-900 text-gray-800 dark:text-gray-300 py-12 px-6">
+    <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+      
+      {/* Logo & Description */}
+      <div>
+        <h1 className="text-3xl font-extrabold text-blue-700 dark:text-white mb-3">🚀 Gravitons</h1>
+        <p className="text-sm leading-relaxed">
+          Connecting ideas, building the future. <br />
+          All rights reserved © 2025
+        </p>
+      </div>
+  
+      {/* Navigation Links */}
+      <div>
+        <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">🔗 Quick Links</h2>
+        <ul className="space-y-2">
+          <li><a href="/" className="hover:text-blue-600 transition">Home</a></li>
+          <li><a href="/about" className="hover:text-blue-600 transition">About</a></li>
+          <li><a href="/contact" className="hover:text-blue-600 transition">Contact</a></li>
+          <li><a href="/login" className="hover:text-blue-600 transition">Login</a></li>
+        </ul>
+      </div>
+  
+      {/* Social Media */}
+      <div>
+        <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">📱 Follow Us</h2>
+        <div className="flex space-x-5 text-2xl">
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition"><FaFacebookF /></a>
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-sky-500 transition"><FaTwitter /></a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-pink-500 transition"><FaInstagram /></a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-800 transition"><FaLinkedinIn /></a>
         </div>
       </div>
-
-      {/* Bottom Line */}
-      <div className="text-center text-sm mt-10 border-t pt-5 border-gray-300 dark:border-gray-700">
-        © 2025 Gravitons.
-      </div>
-    </footer>
+    </div>
+  
+    {/* Bottom Line */}
+    <div className="mt-10 border-t pt-6 text-center text-sm text-gray-600 dark:text-gray-400 border-gray-300 dark:border-gray-700">
+      © 2025 Gravitons. 
+    </div>
+  </footer>
+  
   );
 };
 

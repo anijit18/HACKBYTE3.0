@@ -1,31 +1,37 @@
 import React from "react";
-import { useNavigate } from "react-router-dom"; // ✅ Import navigate hook
+import { useNavigate } from "react-router-dom";
 import FeaturedProfiles from "../components/FeaturedProfiles";
-// import Services from "../components/Services";
-// import TopProfiles from "../components/TopProfiles";
+import ParticleTransition from "../components/ParticleTransition";
+import { motion } from "framer-motion";
 
 export default function HomePage() {
-  const navigate = useNavigate(); // ✅ Initialize navigate
+  const navigate = useNavigate();
 
   return (
-    <>
-      <div
-        className="relative h-screen bg-cover bg-center"
-        style={{
-          backgroundImage:
-            "url('https://static.vecteezy.com/system/resources/previews/007/064/600/original/blue-technology-future-big-data-server-glow-triangular-abstract-technology-digital-big-data-social-blue-triangles-poster-geometric-wallpaper-technology-texture-free-vector.jpg')",
-        }}
-      >
-        <div className="absolute inset-0 bg-black opacity-60 flex flex-col items-center justify-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
-            WELCOME TO  SKILL BRIDGE
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1.2 }}
+    >
+      <div className="relative h-screen overflow-hidden">
+        {/* Particle background */}
+        <div className="absolute inset-0 z-0">
+          <ParticleTransition />
+        </div>
+
+        {/* Overlay content */}
+        <div className="absolute inset-0 bg-black bg-opacity-70 z-10 flex flex-col items-center justify-center text-center px-4">
+          <h1 className="text-4xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-teal-300 to-purple-400 drop-shadow-lg animate-fade-down mb-4">
+            WELCOME TO SKILL BRIDGE
           </h1>
-          <p className="text-lg md:text-2xl text-white mb-8">
+
+          <p className="text-xl md:text-2xl text-gray-200 max-w-2xl mb-8 animate-fade-up">
             Teach What You Know, Learn What You Love
           </p>
+
           <button
-            className="border text-white px-6 py-2 rounded-full text-lg md:text-xl hover:bg-red-700 transform transition duration-300 hover:scale-105 cursor-pointer"
             onClick={() => navigate("/login")}
+            className="bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 text-white px-8 py-3 rounded-full text-lg font-semibold shadow-lg hover:shadow-2xl hover:scale-105 transform transition-all duration-300 cursor-pointer animate-fade-up"
           >
             Get Started
           </button>
@@ -35,6 +41,6 @@ export default function HomePage() {
       <FeaturedProfiles />
       {/* <Services /> */}
       {/* <TopProfiles /> */}
-    </>
+    </motion.div>
   );
 }
