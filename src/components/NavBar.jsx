@@ -13,9 +13,10 @@ const NavBar = () => {
                 <div className="hidden md:flex space-x-4 text-sm font-bold items-center">
                     <Link to='/' className="px-6 py-2 hover:bg-gray-600 hover:text-white">HOME</Link>
                     <Link to="/Profiles" className="px-6 py-2 hover:bg-gray-600 hover:text-white">Profiles</Link>
-                    <Link to="/Contact" className="px-6 py-2 hover:bg-gray-600 hover:text-white">Contact Us</Link>
+                    <Link to="/ContactUs" className="px-6 py-2 hover:bg-gray-600 hover:text-white">Contact Us</Link>
                     <Link to="/About" className="px-6 py-2 hover:bg-gray-600 hover:text-white">About Us</Link>
                     <Link to="/Login" className="px-6 py-2 bg-gray-300 hover:bg-blue-600 hover:text-white">Login</Link>
+                    <Link to="/SignUp" className="px-6 py-2 bg-gray-300 hover:bg-blue-600 hover:text-white">SignUp</Link>
 
                     {/* <button className="py-2 px-6 border bg-gray-300">Login</button> */}
                 </div>
@@ -32,7 +33,7 @@ const NavBar = () => {
                     <Link to="AboutUs" className="px-6 py-2 hover:bg-gray-600 hover:text-white">About Us</Link>
 
                     <button className="py-2 px-6 border bg-green-300">Login</button>
-                    <button className="py-2 px-6 border bg-green-300">Register</button>
+                    <button className="py-2 px-6 border bg-green-300">SignUp</button>
                 </div>
             )}
             </div>
