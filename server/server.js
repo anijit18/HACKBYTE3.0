@@ -4,24 +4,29 @@ const dotenv = require("dotenv");
 const User = require("./models/user");
 const authRoutes = require('./routes/authRoutes');
 const profileRoutes = require('./routes/profileRoutes');
+const cors = require("cors");
+const connectDB = require('./db');
 
 dotenv.config();
 
+connectDB();
+
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 const PORT = process.env.PORT || 5000;
 const MONGO_URI = process.env.MONGO_URI;
 
 // Connect to MongoDB
-mongoose.connect(MONGO_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-}).then(() => {
-  console.log("MongoDB connected");
-}).catch((err) => {
-  console.error("MongoDB connection error:", err);
-});
+// mongoose.connect(MONGO_URI, {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true
+// }).then(() => {
+//   console.log("MongoDB connected");
+// }).catch((err) => {
+//   console.error("MongoDB connection error:", err);
+// });
 
 // Test route
 app.get("/", (req, res) => {
