@@ -39,7 +39,12 @@ app.post("/users", async (req, res) => {
         res.status(400).json({ error: err.message });
     }
 });
+
+// authenticated routes 
 app.use("/api/auth", authRoutes);
+
+app.use("/api/profile", require("./routes/profile"));
+
 
 // Get all users
 app.get("/users", async (req, res) => {
