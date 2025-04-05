@@ -8,4 +8,5 @@ router.get("/:id", authMiddleware, getProfile);
 router.put("/:id", authMiddleware, updateProfile);
 router.delete('/:id', authMiddleware, deleteProfile);
 
+
 module.exports = router;

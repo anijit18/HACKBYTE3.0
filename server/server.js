@@ -28,27 +28,16 @@ app.get("/", (req, res) => {
   res.send("Server is running!");
 });
 
-// Create a new user
-app.post("/users", async (req, res) => {
-    try {
-        const { name, email } = req.body;
-        const user = new User({ name, email });
-        await user.save();
-        res.status(201).json(user);
-    } catch (err) {
-        res.status(400).json({ error: err.message });
-    }
-});
+
+// authenticated routes 
 app.use("/api/auth", authRoutes);
 
-// Get all users
-app.get("/users", async (req, res) => {
-  const users = await User.find();
-  res.json(users);
-});
 
+// app.use("/api/profile", require("./routes/profile"));
 app.use("/api/profile", profileRoutes);
+app.use("/api/posts", require("./routes/skillPost"));
 
+// app.use("api/profile",require("./routes/profile"));
 
 
 app.listen(PORT, () => {
