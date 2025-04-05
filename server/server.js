@@ -35,6 +35,8 @@ app.use("/api/auth", authRoutes);
 
 // app.use("/api/profile", require("./routes/profile"));
 app.use("/api/profile", profileRoutes);
+app.use("/api/posts", require("./routes/skillPost"));
+
 // app.use("api/profile",require("./routes/profile"));
 
 
