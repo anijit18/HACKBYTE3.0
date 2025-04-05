@@ -1,6 +1,15 @@
 import React, { useState } from "react";
+import axios from 'axios';
 
 export default function SignUp() {
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    password: "",
+    bio: "",
+  });
+
   const [proficientSkills, setProficientSkills] = useState([]);
   const [learningSkills, setLearningSkills] = useState([]);
 
@@ -14,6 +23,33 @@ export default function SignUp() {
     "Writing",
     "Public Speaking",
   ];
+
+  const handleChange = (e) => {
+    setFormData((prev) => ({
+      ...prev,
+      [e.target.id]: e.target.value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const allSkills = [
+      ...new Set([...proficientSkills, ...learningSkills]),
+    ]; // merge skills uniquely
+
+    try {
+      const response = await axios.post("http://localhost:5000/api/auth/register", {
+        ...formData,
+        skills: allSkills,
+      });
+
+      console.log("Registered:", response.data);
+      alert("User registered successfully!");
+    } catch (err) {
+      console.error(err.response?.data || err.message);
+      alert(err.response?.data?.message || "Registration failed");
+    }
+  };
 
   const handleProficientToggle = (skill) => {
     setProficientSkills((prev) =>
@@ -34,7 +70,7 @@ export default function SignUp() {
           Create Account
         </h2>
 
-        <form className="space-y-6">
+        <form className="space-y-6" onSubmit={handleSubmit}>
           <div>
             <label className="block text-gray-700 mb-1" htmlFor="name">
               Full Name
@@ -42,8 +78,11 @@ export default function SignUp() {
             <input
               id="name"
               type="text"
+              value={formData.name}
+              onChange={handleChange}
               className="w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="John Doe"
+              required
             />
           </div>
 
@@ -54,8 +93,11 @@ export default function SignUp() {
             <input
               id="email"
               type="email"
+              value={formData.email}
+              onChange={handleChange}
               className="w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="you@example.com"
+              required
             />
           </div>
 
@@ -66,8 +108,11 @@ export default function SignUp() {
             <input
               id="password"
               type="password"
+              value={formData.password}
+              onChange={handleChange}
               className="w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="••••••••"
+              required
             />
           </div>
 
