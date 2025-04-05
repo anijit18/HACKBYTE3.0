@@ -13,12 +13,12 @@ export default function HomePage() {
         className="relative h-screen bg-cover bg-center"
         style={{
           backgroundImage:
-            "url('https://images.pexels.com/photos/5011647/pexels-photo-5011647.jpeg?auto=compress&cs=tinysrgb&w=600')",
+            "url('https://static.vecteezy.com/system/resources/previews/007/064/600/original/blue-technology-future-big-data-server-glow-triangular-abstract-technology-digital-big-data-social-blue-triangles-poster-geometric-wallpaper-technology-texture-free-vector.jpg')",
         }}
       >
-        <div className="absolute inset-0 bg-black opacity-50 flex flex-col items-center justify-center">
+        <div className="absolute inset-0 bg-black opacity-60 flex flex-col items-center justify-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
-            SKILL BRIDGE
+            WELCOME TO  SKILL BRIDGE
           </h1>
           <p className="text-lg md:text-2xl text-white mb-8">
             Teach What You Know, Learn What You Love
