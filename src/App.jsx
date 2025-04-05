@@ -9,6 +9,7 @@ import ContactUs from './pages/Contact'
 import AboutUs from './pages/About'
 import SignUp from './pages/SignUp'
 import Profile from './pages/Profile'
+import ChatPage from './pages/ChatPage'
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
           <Route path="/signup" element={<SignUp/>} />
           <Route path="/contactus" element={<ContactUs/>} />
           <Route path="/about" element={<AboutUs/>} />
+          <Route path="/chatpage" element={<ChatPage/>} />
         </Routes>
         <Footer/>
       </BrowserRouter>
