@@ -44,7 +44,7 @@ const NavBar = () => {
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-4 text-l font-bold items-center">
   <Link to='/' className="px-6 py-2 hover:bg-teal-600 hover:text-white">Home</Link>
-  <Link to="/Profile" className="px-6 py-2 hover:bg-teal-600 hover:text-white">Profiles</Link>
+  <Link to="/Profile" className="px-6 py-2 hover:bg-teal-600 hover:text-white">My Profile</Link>
   <Link to="/ContactUs" className="px-6 py-2 hover:bg-teal-600 hover:text-white">Contact Us</Link>
   <Link to="/About" className="px-6 py-2 hover:bg-teal-600 hover:text-white">About Us</Link>
   <Link to="/ChatPage" className="px-6 py-2 hover:bg-teal-600 hover:text-white">Messages</Link>
