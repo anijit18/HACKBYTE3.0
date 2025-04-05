@@ -2,6 +2,8 @@ const express = require("express");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const User = require("./models/user");
+const authRoutes = require('./routes/authRoutes');
+const profileRoutes = require('./routes/profileRoutes');
 
 dotenv.config();
 
@@ -28,21 +30,26 @@ app.get("/", (req, res) => {
 
 // Create a new user
 app.post("/users", async (req, res) => {
-  try {
-    const { name, email } = req.body;
-    const user = new User({ name, email });
-    await user.save();
-    res.status(201).json(user);
-  } catch (err) {
-    res.status(400).json({ error: err.message });
-  }
+    try {
+        const { name, email } = req.body;
+        const user = new User({ name, email });
+        await user.save();
+        res.status(201).json(user);
+    } catch (err) {
+        res.status(400).json({ error: err.message });
+    }
 });
+app.use("/api/auth", authRoutes);
 
 // Get all users
 app.get("/users", async (req, res) => {
   const users = await User.find();
   res.json(users);
 });
+
+app.use("/api/profile", profileRoutes);
+
+
 
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
