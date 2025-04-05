@@ -7,7 +7,7 @@ import Footer from './pages/Footer'
 import LoginPage from './pages/Login'
 import ContactUs from './pages/Contact'
 import AboutUs from './pages/About'
-import Register from './pages/Register'
+import SignUp from './pages/SignUp'
 
 function App() {
 
@@ -18,8 +18,8 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage/>} />
           <Route path="/login" element={<LoginPage/>} />
-          <Route path="/register" element={<Register/>} />
-          <Route path="/contact" element={<ContactUs/>} />
+          <Route path="/signup" element={<SignUp/>} />
+          <Route path="/contactus" element={<ContactUs/>} />
           <Route path="/about" element={<AboutUs/>} />
         </Routes>
         <Footer/>
