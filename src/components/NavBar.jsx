@@ -43,6 +43,7 @@ const NavBar = () => {
       />
     </div>
 
+
     {/* Desktop Navigation */}
     <div className="hidden md:flex space-x-3 font-semibold text-gray-700 items-center">
       <Link to="/" className="hover:text-blue-600 hover:underline transition">Home</Link>
@@ -63,6 +64,7 @@ const NavBar = () => {
         Sign Up
       </Link>
     </div>
+
 
     {/* Hamburger Icon for Mobile */}
     <div className="md:hidden">
